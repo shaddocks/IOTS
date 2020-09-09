@@ -5,6 +5,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 import java.util.Random;
 public interface RSA {
+
     static String fill(String str){//补位
         int i=16-str.length();
         while(i!=0){
@@ -14,7 +15,6 @@ public interface RSA {
         return str;
     }
     static String toBinary(String str){
-        //把字符串转成字符数组
         String result="",temp;
         for(int i=0;i<str.length();i++){
             temp=fill(Integer.toBinaryString(str.charAt(i)));
